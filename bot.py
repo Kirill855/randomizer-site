@@ -65,6 +65,6 @@ def run_bot():
     app_bot.add_handler(CommandHandler("clear", clear_list))
     app_bot.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, add_message))
     print("Бот запущен!", flush=True)
-    app_bot.run_polling()
+    app_bot.run_polling(stop_signals=None)
 
 threading.Thread(target=run_bot, daemon=True).start()
