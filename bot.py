@@ -96,4 +96,4 @@ def reset():
         save_data(data)
     return jsonify({"ok": True})
     
-    threading.Thread(target=run_bot, daemon=True).start()
+threading.Thread(target=run_bot, daemon=True).start()
